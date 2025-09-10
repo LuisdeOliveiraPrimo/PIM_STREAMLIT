@@ -1,0 +1,201 @@
+turma_id,nome_turma,professor_id
+101,Algoritmos Avançados - 2025.2,131
+102,Cálculo I - 2025.2,190
+103,Engenharia de Software - 2025.2,143
+104,Engenharia de Software - 2025.2,75
+105,Engenharia de Software - 2025.2,309
+106,Algoritmos Avançados - 2025.2,145
+107,Engenharia de Software - 2025.2,145
+108,Redes de Computadores - 2025.2,86
+109,Engenharia de Software - 2025.2,120
+110,Cálculo I - 2025.2,253
+111,Algoritmos Avançados - 2025.2,382
+112,Redes de Computadores - 2025.2,337
+113,Inteligência Artificial - 2025.2,90
+114,Banco de Dados - 2025.2,302
+115,Cálculo I - 2025.2,353
+116,Banco de Dados - 2025.2,67
+117,Banco de Dados - 2025.2,224
+118,Algoritmos Avançados - 2025.2,285
+119,Inteligência Artificial - 2025.2,138
+120,Cálculo I - 2025.2,270
+121,Cálculo I - 2025.2,283
+122,Algoritmos Avançados - 2025.2,114
+123,Inteligência Artificial - 2025.2,107
+124,Inteligência Artificial - 2025.2,301
+125,Banco de Dados - 2025.2,315
+126,Banco de Dados - 2025.2,199
+127,Banco de Dados - 2025.2,300
+128,Redes de Computadores - 2025.2,168
+129,Redes de Computadores - 2025.2,384
+130,Algoritmos Avançados - 2025.2,116
+131,Banco de Dados - 2025.2,216
+132,Redes de Computadores - 2025.2,195
+133,Banco de Dados - 2025.2,349
+134,Redes de Computadores - 2025.2,348
+135,Algoritmos Avançados - 2025.2,319
+136,Inteligência Artificial - 2025.2,305
+137,Algoritmos Avançados - 2025.2,100
+138,Inteligência Artificial - 2025.2,338
+139,Banco de Dados - 2025.2,118
+140,Banco de Dados - 2025.2,46
+141,Cálculo I - 2025.2,299
+142,Engenharia de Software - 2025.2,150
+143,Redes de Computadores - 2025.2,320
+144,Cálculo I - 2025.2,371
+145,Engenharia de Software - 2025.2,196
+146,Engenharia de Software - 2025.2,41
+147,Inteligência Artificial - 2025.2,328
+148,Redes de Computadores - 2025.2,32
+149,Engenharia de Software - 2025.2,240
+150,Algoritmos Avançados - 2025.2,352
+151,Inteligência Artificial - 2025.2,64
+152,Inteligência Artificial - 2025.2,109
+153,Banco de Dados - 2025.2,289
+154,Engenharia de Software - 2025.2,129
+155,Redes de Computadores - 2025.2,262
+156,Banco de Dados - 2025.2,117
+157,Redes de Computadores - 2025.2,328
+158,Cálculo I - 2025.2,283
+159,Inteligência Artificial - 2025.2,154
+160,Redes de Computadores - 2025.2,117
+161,Cálculo I - 2025.2,220
+162,Banco de Dados - 2025.2,61
+163,Redes de Computadores - 2025.2,332
+164,Banco de Dados - 2025.2,60
+165,Banco de Dados - 2025.2,289
+166,Inteligência Artificial - 2025.2,312
+167,Engenharia de Software - 2025.2,215
+168,Engenharia de Software - 2025.2,322
+169,Cálculo I - 2025.2,252
+170,Redes de Computadores - 2025.2,364
+171,Redes de Computadores - 2025.2,127
+172,Engenharia de Software - 2025.2,70
+173,Engenharia de Software - 2025.2,347
+174,Redes de Computadores - 2025.2,262
+175,Algoritmos Avançados - 2025.2,142
+176,Algoritmos Avançados - 2025.2,155
+177,Banco de Dados - 2025.2,295
+178,Redes de Computadores - 2025.2,64
+179,Cálculo I - 2025.2,169
+180,Redes de Computadores - 2025.2,331
+181,Banco de Dados - 2025.2,217
+182,Redes de Computadores - 2025.2,317
+183,Inteligência Artificial - 2025.2,86
+184,Engenharia de Software - 2025.2,266
+185,Banco de Dados - 2025.2,376
+186,Cálculo I - 2025.2,329
+187,Inteligência Artificial - 2025.2,240
+188,Engenharia de Software - 2025.2,98
+189,Redes de Computadores - 2025.2,84
+190,Inteligência Artificial - 2025.2,54
+191,Engenharia de Software - 2025.2,278
+192,Algoritmos Avançados - 2025.2,227
+193,Inteligência Artificial - 2025.2,41
+194,Banco de Dados - 2025.2,101
+195,Engenharia de Software - 2025.2,176
+196,Cálculo I - 2025.2,71
+197,Cálculo I - 2025.2,171
+198,Algoritmos Avançados - 2025.2,69
+199,Redes de Computadores - 2025.2,280
+200,Banco de Dados - 2025.2,375
+201,Banco de Dados - 2025.2,141
+202,Cálculo I - 2025.2,319
+203,Redes de Computadores - 2025.2,218
+204,Redes de Computadores - 2025.2,246
+205,Inteligência Artificial - 2025.2,327
+206,Redes de Computadores - 2025.2,291
+207,Engenharia de Software - 2025.2,86
+208,Banco de Dados - 2025.2,372
+209,Inteligência Artificial - 2025.2,336
+210,Redes de Computadores - 2025.2,311
+211,Engenharia de Software - 2025.2,125
+212,Banco de Dados - 2025.2,176
+213,Algoritmos Avançados - 2025.2,370
+214,Banco de Dados - 2025.2,293
+215,Inteligência Artificial - 2025.2,192
+216,Banco de Dados - 2025.2,66
+217,Engenharia de Software - 2025.2,195
+218,Redes de Computadores - 2025.2,243
+219,Banco de Dados - 2025.2,101
+220,Inteligência Artificial - 2025.2,41
+221,Redes de Computadores - 2025.2,240
+222,Cálculo I - 2025.2,102
+223,Algoritmos Avançados - 2025.2,126
+224,Engenharia de Software - 2025.2,380
+225,Engenharia de Software - 2025.2,66
+226,Engenharia de Software - 2025.2,182
+227,Banco de Dados - 2025.2,163
+228,Algoritmos Avançados - 2025.2,178
+229,Banco de Dados - 2025.2,347
+230,Redes de Computadores - 2025.2,138
+231,Cálculo I - 2025.2,55
+232,Banco de Dados - 2025.2,109
+233,Cálculo I - 2025.2,195
+234,Engenharia de Software - 2025.2,138
+235,Inteligência Artificial - 2025.2,237
+236,Banco de Dados - 2025.2,136
+237,Algoritmos Avançados - 2025.2,357
+238,Algoritmos Avançados - 2025.2,156
+239,Algoritmos Avançados - 2025.2,387
+240,Engenharia de Software - 2025.2,372
+241,Algoritmos Avançados - 2025.2,382
+242,Banco de Dados - 2025.2,316
+243,Inteligência Artificial - 2025.2,292
+244,Inteligência Artificial - 2025.2,157
+245,Banco de Dados - 2025.2,295
+246,Cálculo I - 2025.2,246
+247,Engenharia de Software - 2025.2,297
+248,Cálculo I - 2025.2,226
+249,Cálculo I - 2025.2,129
+250,Algoritmos Avançados - 2025.2,202
+251,Banco de Dados - 2025.2,159
+252,Algoritmos Avançados - 2025.2,215
+253,Redes de Computadores - 2025.2,315
+254,Redes de Computadores - 2025.2,287
+255,Banco de Dados - 2025.2,285
+256,Algoritmos Avançados - 2025.2,91
+257,Banco de Dados - 2025.2,208
+258,Inteligência Artificial - 2025.2,164
+259,Engenharia de Software - 2025.2,39
+260,Algoritmos Avançados - 2025.2,376
+261,Engenharia de Software - 2025.2,237
+262,Banco de Dados - 2025.2,197
+263,Cálculo I - 2025.2,325
+264,Inteligência Artificial - 2025.2,206
+265,Inteligência Artificial - 2025.2,158
+266,Inteligência Artificial - 2025.2,287
+267,Cálculo I - 2025.2,234
+268,Banco de Dados - 2025.2,160
+269,Redes de Computadores - 2025.2,352
+270,Engenharia de Software - 2025.2,161
+271,Redes de Computadores - 2025.2,202
+272,Algoritmos Avançados - 2025.2,292
+273,Engenharia de Software - 2025.2,179
+274,Redes de Computadores - 2025.2,326
+275,Banco de Dados - 2025.2,48
+276,Engenharia de Software - 2025.2,122
+277,Engenharia de Software - 2025.2,99
+278,Banco de Dados - 2025.2,262
+279,Redes de Computadores - 2025.2,265
+280,Cálculo I - 2025.2,159
+281,Engenharia de Software - 2025.2,236
+282,Engenharia de Software - 2025.2,152
+283,Banco de Dados - 2025.2,85
+284,Redes de Computadores - 2025.2,115
+285,Banco de Dados - 2025.2,86
+286,Banco de Dados - 2025.2,233
+287,Inteligência Artificial - 2025.2,111
+288,Redes de Computadores - 2025.2,76
+289,Banco de Dados - 2025.2,190
+290,Inteligência Artificial - 2025.2,207
+291,Banco de Dados - 2025.2,320
+292,Inteligência Artificial - 2025.2,101
+293,Engenharia de Software - 2025.2,373
+294,Cálculo I - 2025.2,285
+295,Inteligência Artificial - 2025.2,118
+296,Algoritmos Avançados - 2025.2,347
+297,Algoritmos Avançados - 2025.2,238
+298,Redes de Computadores - 2025.2,199
+299,Inteligência Artificial - 2025.2,353
+300,Redes de Computadores - 2025.2,136
