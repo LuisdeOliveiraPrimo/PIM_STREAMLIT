@@ -1,66 +1,41 @@
+# pages/painel_professor.py
 import streamlit as st
 import pandas as pd
+from auth_utils import show_custom_menu
 
-# Verificar se o usuário está logado e se é um professor
-if not st.session_state.get('logged_in') or st.session_state.user_info['role'] != 'Professor':
-    st.error("Acesso negado. Por favor, faça o login como professor.")
-    st.stop()
+show_custom_menu()
 
-# --- CARREGAR DADOS ---
-# É uma boa prática carregar os dados dentro de funções com cache para performance
-@st.cache_data
-def load_data():
-    turmas_df = pd.read_csv('data/turmas.csv')
-    matriculas_df = pd.read_csv('data/matriculas.csv')
-    usuarios_df = pd.read_csv('data/usuarios.csv')
-    return turmas_df, matriculas_df, usuarios_df
+st.title("🧑‍🏫 Painel do Professor")
+st.write(f"Olá, Prof(a). **{st.session_state.user_info['nome_completo']}**!")
 
-turmas_df, matriculas_df, usuarios_df = load_data()
-
-# --- PÁGINA DO PROFESSOR ---
-user_info = st.session_state.user_info
-st.title(f"Bem-vindo(a) ao seu Painel, Prof. {user_info['nome_completo'].split(' ')[0]}!")
-
-# Filtrar para encontrar as turmas do professor logado
-professor_id = user_info['user_id']
-minhas_turmas = turmas_df[turmas_df['professor_id'] == professor_id]
-
-if minhas_turmas.empty:
-    st.warning("Você não está alocado em nenhuma turma no momento.")
-    st.stop()
-
-# --- INTERFACE ---
-st.header("Minhas Turmas")
-turma_selecionada_nome = st.selectbox(
-    "Selecione uma turma para gerenciar:",
-    options=minhas_turmas['nome_turma'].unique()
-)
-
-# Obter ID da turma selecionada
-turma_id_selecionada = minhas_turmas[minhas_turmas['nome_turma'] == turma_selecionada_nome]['turma_id'].iloc[0]
-
-st.markdown("---")
-st.subheader(f"Gerenciando a Turma: {turma_selecionada_nome}")
-
-# Abas para Diário, Atividades, etc.
-tab1, tab2 = st.tabs(["📊 Diário de Classe", "📝 Gestão de Atividades"])
-
-with tab1:
-    st.header("Alunos Matriculados e Desempenho")
+try:
+    df_turmas = pd.read_csv('data/turmas.csv')
+    df_disciplinas = pd.read_csv('data/disciplinas.csv')
+    df_matriculas = pd.read_csv('data/matriculas.csv')
+    df_usuarios = pd.read_csv('data/usuarios.csv')
     
-    # Encontrar os alunos matriculados na turma selecionada
-    matriculas_turma = matriculas_df[matriculas_df['turma_id'] == turma_id_selecionada]
-    alunos_na_turma = usuarios_df[usuarios_df['user_id'].isin(matriculas_turma['aluno_id'])]
-    
-    if alunos_na_turma.empty:
-        st.info("Nenhum aluno matriculado nesta turma ainda.")
+    professor_id = st.session_state.user_info['id_usuario']
+    turmas_professor = df_turmas[df_turmas['id_professor'] == professor_id]
+    turmas_professor = pd.merge(turmas_professor, df_disciplinas, on='id_disciplina')
+
+    if turmas_professor.empty:
+        st.warning("Você não está alocado em nenhuma turma.")
     else:
-        st.write(f"Total de alunos: {len(alunos_na_turma)}")
+        st.header("Minhas Turmas")
+        turma_selecionada_nome = st.selectbox(
+            "Selecione uma turma para ver os detalhes:",
+            turmas_professor['nome_disciplina']
+        )
         
-        # Aqui você implementaria a lógica para exibir/editar notas e frequência
-        st.dataframe(alunos_na_turma[['nome_completo', 'username']])
-        st.info("Funcionalidade de lançamento de notas e faltas será implementada aqui.")
+        id_turma_selecionada = turmas_professor[turmas_professor['nome_disciplina'] == turma_selecionada_nome].iloc[0]['id_turma']
+        
+        st.subheader(f"Alunos Matriculados em {turma_selecionada_nome}")
+        
+        alunos_na_turma = pd.merge(df_matriculas, df_usuarios, left_on='id_aluno', right_on='id_usuario')
+        alunos_na_turma = alunos_na_turma[alunos_na_turma['id_turma'] == id_turma_selecionada]
+        
+        st.dataframe(alunos_na_turma[['nome_completo']], use_container_width=True)
+        st.info("Em uma aplicação real, aqui você teria botões para lançar notas e frequência.")
 
-with tab2:
-    st.header("Publicar e Visualizar Atividades")
-    st.info("Funcionalidade para publicar novas atividades e ver as entregas será implementada aqui.")
+except FileNotFoundError:
+    st.error("Arquivos de dados não encontrados. Execute o script de geração de dados.")
