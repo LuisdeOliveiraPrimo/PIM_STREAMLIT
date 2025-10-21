@@ -2,7 +2,20 @@
 import streamlit as st
 import pandas as pd
 from auth_utils import show_custom_menu
+# Bloco de código para o topo de CADA ARQUIVO EM 'pages/'
+import sys
+import os
 
+
+# Pega o caminho do diretório 'pages'
+pages_dir = os.path.dirname(os.path.abspath(__file__))
+# Pega o caminho do diretório Raiz (um nível acima de 'pages')
+project_root = os.path.dirname(pages_dir)
+
+# Adiciona a pasta raiz ao sys.path
+if project_root not in sys.path:
+    sys.path.append(project_root)
+# Fim do bloco
 show_custom_menu()
 
 st.title("👑 Painel de Administração")

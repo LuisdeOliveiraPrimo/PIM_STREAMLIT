@@ -5,6 +5,7 @@ import plotly.graph_objects as go
 from auth_utils import show_custom_menu
 import os
 from datetime import datetime
+import sys
 
 # --- AUTENTICAÇÃO E MENU ---
 show_custom_menu()

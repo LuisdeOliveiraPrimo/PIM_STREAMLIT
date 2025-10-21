@@ -3,6 +3,7 @@ import pandas as pd
 import plotly.express as px
 from streamlit_calendar import calendar
 from auth_utils import show_custom_menu
+import sys
 import os
 
 # --- AUTENTICAÇÃO E MENU ---
