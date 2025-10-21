@@ -1,0 +1,41 @@
+id_disciplina,nome_disciplina,codigo_disciplina,carga_horaria
+1,Redes de Computadores Aplicada,RED1,40
+2,Banco de Dados Aplicada,BAN2,60
+3,Engenharia de Software Avançada,ENG3,80
+4,Estrutura de Dados II,EST4,40
+5,Estrutura de Dados I,EST5,40
+6,Cálculo Aplicada,CÁL6,40
+7,Cálculo Avançada,CÁL7,40
+8,Algoritmos Aplicada,ALG8,80
+9,Marketing Digital Aplicada,MAR9,40
+10,Engenharia de Software Avançada,ENG10,80
+11,Redes de Computadores I,RED11,40
+12,Química Aplicada,QUÍ12,40
+13,Redes de Computadores Aplicada,RED13,60
+14,Química I,QUÍ14,80
+15,Química Aplicada,QUÍ15,60
+16,Engenharia de Software I,ENG16,40
+17,Algoritmos Aplicada,ALG17,60
+18,Estrutura de Dados Aplicada,EST18,80
+19,Marketing Digital II,MAR19,80
+20,Física Aplicada,FÍS20,60
+21,Engenharia de Software I,ENG21,80
+22,Banco de Dados I,BAN22,60
+23,Estrutura de Dados Aplicada,EST23,40
+24,Cálculo Aplicada,CÁL24,60
+25,Inteligência Artificial Aplicada,INT25,80
+26,Redes de Computadores II,RED26,80
+27,Engenharia de Software Aplicada,ENG27,60
+28,Cálculo II,CÁL28,80
+29,Inteligência Artificial Avançada,INT29,40
+30,Algoritmos I,ALG30,80
+31,Redes de Computadores Avançada,RED31,80
+32,Inteligência Artificial Avançada,INT32,60
+33,Física Aplicada,FÍS33,80
+34,Banco de Dados Avançada,BAN34,40
+35,Química Avançada,QUÍ35,40
+36,Estrutura de Dados I,EST36,80
+37,Redes de Computadores Aplicada,RED37,80
+38,Banco de Dados Aplicada,BAN38,40
+39,Redes de Computadores Aplicada,RED39,80
+40,Cálculo I,CÁL40,40

@@ -1,5 +1,7 @@
+# pages/painel_professor.py
 import streamlit as st
 import pandas as pd
+<<<<<<< HEAD
 import plotly.express as px
 import plotly.graph_objects as go
 from auth_utils import show_custom_menu
@@ -48,10 +50,29 @@ try:
     # Removemos a junção com 'df_disciplinas' e a criação de 'turma_display'.
     # Usamos 'nome_turma' diretamente, pois ela já é o nome descritivo.
     turmas_professor['turma_display'] = turmas_professor['nome_turma']
+=======
+from auth_utils import show_custom_menu
+
+show_custom_menu()
+
+st.title("🧑‍🏫 Painel do Professor")
+st.write(f"Olá, Prof(a). **{st.session_state.user_info['nome_completo']}**!")
+
+try:
+    df_turmas = pd.read_csv('data/turmas.csv')
+    df_disciplinas = pd.read_csv('data/disciplinas.csv')
+    df_matriculas = pd.read_csv('data/matriculas.csv')
+    df_usuarios = pd.read_csv('data/usuarios.csv')
+    
+    professor_id = st.session_state.user_info['id_usuario']
+    turmas_professor = df_turmas[df_turmas['id_professor'] == professor_id]
+    turmas_professor = pd.merge(turmas_professor, df_disciplinas, on='id_disciplina')
+>>>>>>> 2c890c1dde41bf62524c09774854234b3a8644dd
 
     if turmas_professor.empty:
         st.warning("Você não está alocado em nenhuma turma.")
     else:
+<<<<<<< HEAD
         turma_selecionada_display = st.selectbox(
             "Selecione uma de suas turmas para gerenciar:",
             turmas_professor['turma_display']
@@ -223,3 +244,23 @@ except KeyError as e:
     st.error(f"Erro de Coluna: Uma coluna esperada não foi encontrada: {e}. Verifique se os seus CSVs (ex: 'usuario.csv', 'turmas.csv') têm todas as colunas necessárias ('user_id', 'professor_id', 'aluno_id', 'nota', etc.).")
 except Exception as e:
     st.error(f"Ocorreu um erro ao processar os dados: {e}")
+=======
+        st.header("Minhas Turmas")
+        turma_selecionada_nome = st.selectbox(
+            "Selecione uma turma para ver os detalhes:",
+            turmas_professor['nome_disciplina']
+        )
+        
+        id_turma_selecionada = turmas_professor[turmas_professor['nome_disciplina'] == turma_selecionada_nome].iloc[0]['id_turma']
+        
+        st.subheader(f"Alunos Matriculados em {turma_selecionada_nome}")
+        
+        alunos_na_turma = pd.merge(df_matriculas, df_usuarios, left_on='id_aluno', right_on='id_usuario')
+        alunos_na_turma = alunos_na_turma[alunos_na_turma['id_turma'] == id_turma_selecionada]
+        
+        st.dataframe(alunos_na_turma[['nome_completo']], use_container_width=True)
+        st.info("Em uma aplicação real, aqui você teria botões para lançar notas e frequência.")
+
+except FileNotFoundError:
+    st.error("Arquivos de dados não encontrados. Execute o script de geração de dados.")
+>>>>>>> 2c890c1dde41bf62524c09774854234b3a8644dd

@@ -2,7 +2,10 @@
 import streamlit as st
 
 def show_custom_menu():
+<<<<<<< HEAD
     # Esconde o menu de navegação padrão do Streamlit
+=======
+>>>>>>> 2c890c1dde41bf62524c09774854234b3a8644dd
     st.markdown("""
         <style>
             [data-testid="stSidebarNav"] > ul {
@@ -11,6 +14,7 @@ def show_custom_menu():
         </style>
         """, unsafe_allow_html=True)
 
+<<<<<<< HEAD
     # Verifica se o usuário está logado, se não, chuta para a página principal
     if not st.session_state.get('logged_in', False):
         st.switch_page("main.py")
@@ -22,13 +26,25 @@ def show_custom_menu():
     # Botão de Logout
     if st.sidebar.button("Logout"):
         # Limpa toda a sessão
+=======
+    if not st.session_state.get('logged_in', False):
+        st.switch_page("main.py")
+
+    st.sidebar.info(f"Usuário: **{st.session_state.user_info['nome_completo']}**")
+    st.sidebar.info(f"Perfil: **{st.session_state.user_info['role']}**")
+    
+    if st.sidebar.button("Logout"):
+>>>>>>> 2c890c1dde41bf62524c09774854234b3a8644dd
         for key in list(st.session_state.keys()):
             del st.session_state[key]
         st.switch_page("main.py")
 
     st.sidebar.header("Navegação")
     
+<<<<<<< HEAD
     # Menus de navegação dinâmicos baseados no perfil ('role')
+=======
+>>>>>>> 2c890c1dde41bf62524c09774854234b3a8644dd
     role = st.session_state.user_info['role']
 
     if role == 'Aluno':

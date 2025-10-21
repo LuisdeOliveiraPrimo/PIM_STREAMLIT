@@ -1,201 +1,301 @@
-turma_id,nome_turma,professor_id
-101,Algoritmos Avançados - 2025.2,131
-102,Cálculo I - 2025.2,190
-103,Engenharia de Software - 2025.2,143
-104,Engenharia de Software - 2025.2,75
-105,Engenharia de Software - 2025.2,309
-106,Algoritmos Avançados - 2025.2,145
-107,Engenharia de Software - 2025.2,145
-108,Redes de Computadores - 2025.2,86
-109,Engenharia de Software - 2025.2,120
-110,Cálculo I - 2025.2,253
-111,Algoritmos Avançados - 2025.2,382
-112,Redes de Computadores - 2025.2,337
-113,Inteligência Artificial - 2025.2,90
-114,Banco de Dados - 2025.2,302
-115,Cálculo I - 2025.2,353
-116,Banco de Dados - 2025.2,67
-117,Banco de Dados - 2025.2,224
-118,Algoritmos Avançados - 2025.2,285
-119,Inteligência Artificial - 2025.2,138
-120,Cálculo I - 2025.2,270
-121,Cálculo I - 2025.2,283
-122,Algoritmos Avançados - 2025.2,114
-123,Inteligência Artificial - 2025.2,107
-124,Inteligência Artificial - 2025.2,301
-125,Banco de Dados - 2025.2,315
-126,Banco de Dados - 2025.2,199
-127,Banco de Dados - 2025.2,300
-128,Redes de Computadores - 2025.2,168
-129,Redes de Computadores - 2025.2,384
-130,Algoritmos Avançados - 2025.2,116
-131,Banco de Dados - 2025.2,216
-132,Redes de Computadores - 2025.2,195
-133,Banco de Dados - 2025.2,349
-134,Redes de Computadores - 2025.2,348
-135,Algoritmos Avançados - 2025.2,319
-136,Inteligência Artificial - 2025.2,305
-137,Algoritmos Avançados - 2025.2,100
-138,Inteligência Artificial - 2025.2,338
-139,Banco de Dados - 2025.2,118
-140,Banco de Dados - 2025.2,46
-141,Cálculo I - 2025.2,299
-142,Engenharia de Software - 2025.2,150
-143,Redes de Computadores - 2025.2,320
-144,Cálculo I - 2025.2,371
-145,Engenharia de Software - 2025.2,196
-146,Engenharia de Software - 2025.2,41
-147,Inteligência Artificial - 2025.2,328
-148,Redes de Computadores - 2025.2,32
-149,Engenharia de Software - 2025.2,240
-150,Algoritmos Avançados - 2025.2,352
-151,Inteligência Artificial - 2025.2,64
-152,Inteligência Artificial - 2025.2,109
-153,Banco de Dados - 2025.2,289
-154,Engenharia de Software - 2025.2,129
-155,Redes de Computadores - 2025.2,262
-156,Banco de Dados - 2025.2,117
-157,Redes de Computadores - 2025.2,328
-158,Cálculo I - 2025.2,283
-159,Inteligência Artificial - 2025.2,154
-160,Redes de Computadores - 2025.2,117
-161,Cálculo I - 2025.2,220
-162,Banco de Dados - 2025.2,61
-163,Redes de Computadores - 2025.2,332
-164,Banco de Dados - 2025.2,60
-165,Banco de Dados - 2025.2,289
-166,Inteligência Artificial - 2025.2,312
-167,Engenharia de Software - 2025.2,215
-168,Engenharia de Software - 2025.2,322
-169,Cálculo I - 2025.2,252
-170,Redes de Computadores - 2025.2,364
-171,Redes de Computadores - 2025.2,127
-172,Engenharia de Software - 2025.2,70
-173,Engenharia de Software - 2025.2,347
-174,Redes de Computadores - 2025.2,262
-175,Algoritmos Avançados - 2025.2,142
-176,Algoritmos Avançados - 2025.2,155
-177,Banco de Dados - 2025.2,295
-178,Redes de Computadores - 2025.2,64
-179,Cálculo I - 2025.2,169
-180,Redes de Computadores - 2025.2,331
-181,Banco de Dados - 2025.2,217
-182,Redes de Computadores - 2025.2,317
-183,Inteligência Artificial - 2025.2,86
-184,Engenharia de Software - 2025.2,266
-185,Banco de Dados - 2025.2,376
-186,Cálculo I - 2025.2,329
-187,Inteligência Artificial - 2025.2,240
-188,Engenharia de Software - 2025.2,98
-189,Redes de Computadores - 2025.2,84
-190,Inteligência Artificial - 2025.2,54
-191,Engenharia de Software - 2025.2,278
-192,Algoritmos Avançados - 2025.2,227
-193,Inteligência Artificial - 2025.2,41
-194,Banco de Dados - 2025.2,101
-195,Engenharia de Software - 2025.2,176
-196,Cálculo I - 2025.2,71
-197,Cálculo I - 2025.2,171
-198,Algoritmos Avançados - 2025.2,69
-199,Redes de Computadores - 2025.2,280
-200,Banco de Dados - 2025.2,375
-201,Banco de Dados - 2025.2,141
-202,Cálculo I - 2025.2,319
-203,Redes de Computadores - 2025.2,218
-204,Redes de Computadores - 2025.2,246
-205,Inteligência Artificial - 2025.2,327
-206,Redes de Computadores - 2025.2,291
-207,Engenharia de Software - 2025.2,86
-208,Banco de Dados - 2025.2,372
-209,Inteligência Artificial - 2025.2,336
-210,Redes de Computadores - 2025.2,311
-211,Engenharia de Software - 2025.2,125
-212,Banco de Dados - 2025.2,176
-213,Algoritmos Avançados - 2025.2,370
-214,Banco de Dados - 2025.2,293
-215,Inteligência Artificial - 2025.2,192
-216,Banco de Dados - 2025.2,66
-217,Engenharia de Software - 2025.2,195
-218,Redes de Computadores - 2025.2,243
-219,Banco de Dados - 2025.2,101
-220,Inteligência Artificial - 2025.2,41
-221,Redes de Computadores - 2025.2,240
-222,Cálculo I - 2025.2,102
-223,Algoritmos Avançados - 2025.2,126
-224,Engenharia de Software - 2025.2,380
-225,Engenharia de Software - 2025.2,66
-226,Engenharia de Software - 2025.2,182
-227,Banco de Dados - 2025.2,163
-228,Algoritmos Avançados - 2025.2,178
-229,Banco de Dados - 2025.2,347
-230,Redes de Computadores - 2025.2,138
-231,Cálculo I - 2025.2,55
-232,Banco de Dados - 2025.2,109
-233,Cálculo I - 2025.2,195
-234,Engenharia de Software - 2025.2,138
-235,Inteligência Artificial - 2025.2,237
-236,Banco de Dados - 2025.2,136
-237,Algoritmos Avançados - 2025.2,357
-238,Algoritmos Avançados - 2025.2,156
-239,Algoritmos Avançados - 2025.2,387
-240,Engenharia de Software - 2025.2,372
-241,Algoritmos Avançados - 2025.2,382
-242,Banco de Dados - 2025.2,316
-243,Inteligência Artificial - 2025.2,292
-244,Inteligência Artificial - 2025.2,157
-245,Banco de Dados - 2025.2,295
-246,Cálculo I - 2025.2,246
-247,Engenharia de Software - 2025.2,297
-248,Cálculo I - 2025.2,226
-249,Cálculo I - 2025.2,129
-250,Algoritmos Avançados - 2025.2,202
-251,Banco de Dados - 2025.2,159
-252,Algoritmos Avançados - 2025.2,215
-253,Redes de Computadores - 2025.2,315
-254,Redes de Computadores - 2025.2,287
-255,Banco de Dados - 2025.2,285
-256,Algoritmos Avançados - 2025.2,91
-257,Banco de Dados - 2025.2,208
-258,Inteligência Artificial - 2025.2,164
-259,Engenharia de Software - 2025.2,39
-260,Algoritmos Avançados - 2025.2,376
-261,Engenharia de Software - 2025.2,237
-262,Banco de Dados - 2025.2,197
-263,Cálculo I - 2025.2,325
-264,Inteligência Artificial - 2025.2,206
-265,Inteligência Artificial - 2025.2,158
-266,Inteligência Artificial - 2025.2,287
-267,Cálculo I - 2025.2,234
-268,Banco de Dados - 2025.2,160
-269,Redes de Computadores - 2025.2,352
-270,Engenharia de Software - 2025.2,161
-271,Redes de Computadores - 2025.2,202
-272,Algoritmos Avançados - 2025.2,292
-273,Engenharia de Software - 2025.2,179
-274,Redes de Computadores - 2025.2,326
-275,Banco de Dados - 2025.2,48
-276,Engenharia de Software - 2025.2,122
-277,Engenharia de Software - 2025.2,99
-278,Banco de Dados - 2025.2,262
-279,Redes de Computadores - 2025.2,265
-280,Cálculo I - 2025.2,159
-281,Engenharia de Software - 2025.2,236
-282,Engenharia de Software - 2025.2,152
-283,Banco de Dados - 2025.2,85
-284,Redes de Computadores - 2025.2,115
-285,Banco de Dados - 2025.2,86
-286,Banco de Dados - 2025.2,233
-287,Inteligência Artificial - 2025.2,111
-288,Redes de Computadores - 2025.2,76
-289,Banco de Dados - 2025.2,190
-290,Inteligência Artificial - 2025.2,207
-291,Banco de Dados - 2025.2,320
-292,Inteligência Artificial - 2025.2,101
-293,Engenharia de Software - 2025.2,373
-294,Cálculo I - 2025.2,285
-295,Inteligência Artificial - 2025.2,118
-296,Algoritmos Avançados - 2025.2,347
-297,Algoritmos Avançados - 2025.2,238
-298,Redes de Computadores - 2025.2,199
-299,Inteligência Artificial - 2025.2,353
-300,Redes de Computadores - 2025.2,136
+id_turma,id_disciplina,id_professor,semestre,horario_sala
+1,25,131,2025.2,"quarta-feira 20h-21h, Sala A106"
+2,9,171,2025.2,"sábado 19h-23h, Sala C185"
+3,15,54,2025.2,"segunda-feira 19h-23h, Sala C245"
+4,30,61,2025.2,"terça-feira 21h-23h, Sala A114"
+5,35,176,2025.2,"quinta-feira 21h-22h, Sala C151"
+6,3,144,2025.2,"segunda-feira 19h-22h, Sala B170"
+7,16,133,2025.2,"sexta-feira 21h-23h, Sala A180"
+8,40,162,2025.2,"sexta-feira 20h-21h, Sala A189"
+9,38,120,2025.2,"sexta-feira 20h-21h, Sala B125"
+10,24,133,2025.2,"quinta-feira 19h-23h, Sala C179"
+11,6,187,2025.2,"segunda-feira 20h-22h, Sala C292"
+12,14,106,2025.2,"terça-feira 21h-22h, Sala B201"
+13,14,128,2025.2,"terça-feira 19h-22h, Sala C208"
+14,21,35,2025.2,"segunda-feira 21h-23h, Sala C275"
+15,38,91,2025.2,"sexta-feira 19h-21h, Sala B279"
+16,3,29,2025.2,"segunda-feira 20h-21h, Sala C161"
+17,18,270,2025.2,"domingo 21h-23h, Sala C279"
+18,39,69,2025.2,"domingo 19h-23h, Sala B188"
+19,37,319,2025.2,"domingo 20h-21h, Sala C217"
+20,19,55,2025.2,"quarta-feira 21h-22h, Sala B279"
+21,33,293,2025.2,"sábado 21h-22h, Sala B171"
+22,5,204,2025.2,"terça-feira 19h-21h, Sala B130"
+23,11,34,2025.2,"domingo 19h-22h, Sala A224"
+24,25,66,2025.2,"sexta-feira 19h-23h, Sala A136"
+25,19,306,2025.2,"quinta-feira 19h-21h, Sala C295"
+26,35,115,2025.2,"terça-feira 19h-21h, Sala A168"
+27,28,168,2025.2,"domingo 21h-21h, Sala A272"
+28,13,222,2025.2,"quarta-feira 21h-23h, Sala C135"
+29,19,57,2025.2,"sábado 19h-23h, Sala A207"
+30,34,142,2025.2,"quinta-feira 21h-21h, Sala A173"
+31,17,308,2025.2,"segunda-feira 20h-21h, Sala A139"
+32,39,145,2025.2,"quarta-feira 19h-23h, Sala A261"
+33,29,266,2025.2,"sexta-feira 20h-23h, Sala C183"
+34,39,314,2025.2,"quarta-feira 19h-23h, Sala B124"
+35,5,215,2025.2,"quinta-feira 19h-23h, Sala C134"
+36,13,249,2025.2,"quarta-feira 19h-21h, Sala A147"
+37,24,96,2025.2,"segunda-feira 20h-22h, Sala A228"
+38,32,240,2025.2,"segunda-feira 21h-22h, Sala A283"
+39,1,180,2025.2,"domingo 20h-21h, Sala C171"
+40,3,202,2025.2,"domingo 19h-23h, Sala B285"
+41,19,172,2025.2,"sexta-feira 21h-22h, Sala C266"
+42,36,26,2025.2,"terça-feira 21h-23h, Sala C116"
+43,8,309,2025.2,"sexta-feira 19h-21h, Sala C190"
+44,13,223,2025.2,"quinta-feira 19h-22h, Sala A119"
+45,6,43,2025.2,"domingo 21h-21h, Sala A223"
+46,9,213,2025.2,"sexta-feira 21h-22h, Sala B108"
+47,21,197,2025.2,"quinta-feira 21h-22h, Sala B111"
+48,37,126,2025.2,"quinta-feira 19h-21h, Sala C194"
+49,32,218,2025.2,"domingo 21h-23h, Sala B269"
+50,37,254,2025.2,"segunda-feira 21h-21h, Sala A100"
+51,28,247,2025.2,"quinta-feira 19h-23h, Sala B226"
+52,22,81,2025.2,"quinta-feira 20h-22h, Sala B143"
+53,36,226,2025.2,"domingo 21h-21h, Sala B161"
+54,26,46,2025.2,"sábado 21h-22h, Sala A202"
+55,26,80,2025.2,"quinta-feira 21h-23h, Sala A258"
+56,38,158,2025.2,"sexta-feira 20h-23h, Sala C200"
+57,19,189,2025.2,"quarta-feira 19h-23h, Sala C271"
+58,32,158,2025.2,"quarta-feira 21h-23h, Sala C252"
+59,1,299,2025.2,"quarta-feira 21h-21h, Sala C290"
+60,10,65,2025.2,"sábado 21h-23h, Sala B297"
+61,17,159,2025.2,"quinta-feira 19h-21h, Sala C177"
+62,10,284,2025.2,"terça-feira 20h-22h, Sala C141"
+63,17,189,2025.2,"domingo 20h-21h, Sala B149"
+64,13,146,2025.2,"segunda-feira 21h-22h, Sala C198"
+65,8,260,2025.2,"sexta-feira 19h-21h, Sala A218"
+66,19,207,2025.2,"sábado 19h-22h, Sala B101"
+67,23,246,2025.2,"terça-feira 20h-23h, Sala B130"
+68,37,48,2025.2,"domingo 20h-22h, Sala B126"
+69,4,322,2025.2,"sexta-feira 21h-22h, Sala C147"
+70,19,189,2025.2,"terça-feira 19h-23h, Sala B259"
+71,20,78,2025.2,"quinta-feira 21h-22h, Sala A145"
+72,15,285,2025.2,"sexta-feira 19h-23h, Sala B250"
+73,33,233,2025.2,"sexta-feira 20h-22h, Sala B261"
+74,35,96,2025.2,"sexta-feira 19h-23h, Sala A288"
+75,18,138,2025.2,"domingo 19h-21h, Sala A204"
+76,24,141,2025.2,"sexta-feira 21h-23h, Sala A169"
+77,12,298,2025.2,"domingo 19h-21h, Sala C233"
+78,4,117,2025.2,"domingo 21h-23h, Sala B238"
+79,13,61,2025.2,"segunda-feira 19h-21h, Sala A127"
+80,39,272,2025.2,"segunda-feira 21h-23h, Sala B238"
+81,32,272,2025.2,"quinta-feira 21h-23h, Sala C183"
+82,6,174,2025.2,"sábado 21h-22h, Sala C274"
+83,5,229,2025.2,"quarta-feira 20h-22h, Sala A147"
+84,38,157,2025.2,"quarta-feira 20h-23h, Sala B114"
+85,20,103,2025.2,"terça-feira 21h-23h, Sala C257"
+86,28,198,2025.2,"sexta-feira 19h-23h, Sala A189"
+87,25,186,2025.2,"domingo 21h-23h, Sala C115"
+88,15,200,2025.2,"domingo 21h-22h, Sala A280"
+89,32,84,2025.2,"sábado 21h-23h, Sala C186"
+90,34,261,2025.2,"domingo 19h-22h, Sala B106"
+91,38,119,2025.2,"quarta-feira 19h-21h, Sala A193"
+92,36,247,2025.2,"terça-feira 21h-23h, Sala B143"
+93,40,100,2025.2,"domingo 19h-23h, Sala C234"
+94,25,213,2025.2,"sábado 21h-21h, Sala B101"
+95,8,303,2025.2,"quarta-feira 19h-21h, Sala B119"
+96,23,302,2025.2,"quinta-feira 20h-21h, Sala B236"
+97,12,26,2025.2,"sábado 20h-23h, Sala C172"
+98,32,62,2025.2,"domingo 20h-23h, Sala A184"
+99,15,189,2025.2,"domingo 19h-21h, Sala C273"
+100,35,285,2025.2,"sábado 19h-21h, Sala B143"
+101,3,152,2025.2,"quarta-feira 20h-23h, Sala B119"
+102,5,138,2025.2,"terça-feira 19h-21h, Sala A240"
+103,4,278,2025.2,"segunda-feira 19h-21h, Sala A210"
+104,20,142,2025.2,"quinta-feira 21h-22h, Sala C266"
+105,36,323,2025.2,"segunda-feira 19h-23h, Sala C257"
+106,38,197,2025.2,"domingo 20h-23h, Sala B221"
+107,30,75,2025.2,"sábado 21h-22h, Sala A228"
+108,17,299,2025.2,"quinta-feira 21h-21h, Sala C220"
+109,35,235,2025.2,"quarta-feira 21h-23h, Sala C136"
+110,39,234,2025.2,"terça-feira 21h-23h, Sala A231"
+111,18,274,2025.2,"segunda-feira 19h-22h, Sala B260"
+112,4,293,2025.2,"quinta-feira 19h-22h, Sala B281"
+113,4,41,2025.2,"terça-feira 21h-23h, Sala C234"
+114,7,262,2025.2,"sexta-feira 20h-23h, Sala B235"
+115,38,242,2025.2,"domingo 19h-21h, Sala A131"
+116,32,26,2025.2,"terça-feira 20h-21h, Sala B198"
+117,16,128,2025.2,"quinta-feira 20h-22h, Sala A231"
+118,17,200,2025.2,"segunda-feira 21h-22h, Sala C292"
+119,1,43,2025.2,"sexta-feira 21h-21h, Sala A129"
+120,37,56,2025.2,"segunda-feira 21h-21h, Sala C219"
+121,31,305,2025.2,"terça-feira 19h-22h, Sala B165"
+122,22,55,2025.2,"sexta-feira 21h-22h, Sala A258"
+123,24,68,2025.2,"segunda-feira 21h-22h, Sala B279"
+124,24,131,2025.2,"segunda-feira 21h-21h, Sala C156"
+125,38,190,2025.2,"terça-feira 19h-22h, Sala A280"
+126,30,203,2025.2,"terça-feira 21h-23h, Sala B284"
+127,11,264,2025.2,"quarta-feira 20h-21h, Sala A265"
+128,4,258,2025.2,"quarta-feira 21h-22h, Sala B222"
+129,29,37,2025.2,"quinta-feira 19h-22h, Sala B286"
+130,37,32,2025.2,"segunda-feira 21h-23h, Sala B260"
+131,32,39,2025.2,"terça-feira 21h-23h, Sala A135"
+132,1,175,2025.2,"domingo 19h-23h, Sala C213"
+133,9,95,2025.2,"sexta-feira 20h-22h, Sala A216"
+134,10,41,2025.2,"sexta-feira 20h-23h, Sala C132"
+135,2,111,2025.2,"quinta-feira 20h-21h, Sala C154"
+136,31,145,2025.2,"quarta-feira 21h-23h, Sala A123"
+137,11,109,2025.2,"sábado 20h-22h, Sala A217"
+138,36,131,2025.2,"sábado 19h-22h, Sala B250"
+139,39,230,2025.2,"quarta-feira 19h-22h, Sala B282"
+140,4,70,2025.2,"sábado 19h-21h, Sala A233"
+141,34,279,2025.2,"domingo 21h-21h, Sala A128"
+142,21,62,2025.2,"quarta-feira 19h-23h, Sala B253"
+143,19,252,2025.2,"terça-feira 21h-21h, Sala A136"
+144,7,194,2025.2,"sexta-feira 19h-22h, Sala C283"
+145,19,178,2025.2,"quarta-feira 20h-23h, Sala C289"
+146,33,121,2025.2,"quarta-feira 20h-23h, Sala B206"
+147,35,103,2025.2,"terça-feira 21h-22h, Sala B245"
+148,12,219,2025.2,"segunda-feira 20h-23h, Sala C224"
+149,13,288,2025.2,"sábado 20h-23h, Sala A102"
+150,1,227,2025.2,"quinta-feira 19h-22h, Sala B247"
+151,5,291,2025.2,"domingo 19h-23h, Sala A203"
+152,20,216,2025.2,"terça-feira 19h-21h, Sala A266"
+153,10,290,2025.2,"sábado 19h-21h, Sala C234"
+154,35,300,2025.2,"sábado 21h-23h, Sala B115"
+155,17,159,2025.2,"sexta-feira 19h-21h, Sala B108"
+156,27,129,2025.2,"terça-feira 20h-21h, Sala A168"
+157,8,306,2025.2,"quarta-feira 20h-22h, Sala B116"
+158,38,58,2025.2,"quinta-feira 19h-23h, Sala A223"
+159,35,202,2025.2,"sexta-feira 19h-21h, Sala C192"
+160,35,314,2025.2,"sábado 21h-23h, Sala C115"
+161,23,194,2025.2,"terça-feira 19h-21h, Sala A217"
+162,24,41,2025.2,"terça-feira 19h-21h, Sala C223"
+163,24,207,2025.2,"quinta-feira 20h-21h, Sala C154"
+164,31,43,2025.2,"segunda-feira 19h-22h, Sala B286"
+165,29,193,2025.2,"terça-feira 21h-22h, Sala B235"
+166,28,214,2025.2,"quinta-feira 19h-22h, Sala C133"
+167,14,72,2025.2,"quarta-feira 20h-23h, Sala A198"
+168,36,41,2025.2,"domingo 19h-21h, Sala C125"
+169,5,305,2025.2,"sábado 21h-21h, Sala C276"
+170,1,142,2025.2,"sexta-feira 19h-23h, Sala B199"
+171,25,213,2025.2,"segunda-feira 20h-22h, Sala C213"
+172,4,75,2025.2,"segunda-feira 21h-21h, Sala C170"
+173,2,244,2025.2,"sexta-feira 19h-23h, Sala C228"
+174,19,256,2025.2,"domingo 19h-23h, Sala A200"
+175,14,88,2025.2,"quarta-feira 20h-22h, Sala C193"
+176,34,271,2025.2,"quarta-feira 21h-22h, Sala C219"
+177,37,309,2025.2,"quinta-feira 19h-22h, Sala A237"
+178,6,144,2025.2,"quarta-feira 21h-21h, Sala C112"
+179,14,228,2025.2,"quinta-feira 19h-21h, Sala C105"
+180,25,295,2025.2,"sexta-feira 21h-23h, Sala A281"
+181,17,50,2025.2,"quarta-feira 21h-23h, Sala B160"
+182,38,181,2025.2,"domingo 20h-21h, Sala B125"
+183,38,182,2025.2,"domingo 20h-23h, Sala A183"
+184,3,246,2025.2,"terça-feira 21h-23h, Sala C153"
+185,39,239,2025.2,"terça-feira 21h-21h, Sala B219"
+186,24,45,2025.2,"segunda-feira 19h-23h, Sala B172"
+187,24,119,2025.2,"quarta-feira 19h-22h, Sala B165"
+188,31,236,2025.2,"segunda-feira 19h-21h, Sala B148"
+189,10,121,2025.2,"quarta-feira 19h-21h, Sala A147"
+190,21,112,2025.2,"domingo 19h-22h, Sala C203"
+191,21,178,2025.2,"sábado 21h-23h, Sala A251"
+192,26,74,2025.2,"quinta-feira 21h-21h, Sala B227"
+193,19,255,2025.2,"sábado 19h-21h, Sala C154"
+194,37,282,2025.2,"terça-feira 20h-21h, Sala B169"
+195,37,87,2025.2,"quarta-feira 19h-22h, Sala A232"
+196,36,231,2025.2,"sábado 20h-21h, Sala B283"
+197,34,202,2025.2,"sábado 20h-22h, Sala C160"
+198,25,259,2025.2,"sexta-feira 19h-22h, Sala A190"
+199,8,42,2025.2,"terça-feira 21h-23h, Sala C217"
+200,21,158,2025.2,"domingo 20h-22h, Sala C176"
+201,30,92,2025.2,"sábado 20h-22h, Sala C234"
+202,25,127,2025.2,"sexta-feira 20h-21h, Sala B265"
+203,16,50,2025.2,"quinta-feira 19h-22h, Sala B271"
+204,7,219,2025.2,"domingo 19h-23h, Sala C147"
+205,2,40,2025.2,"domingo 19h-22h, Sala B297"
+206,15,258,2025.2,"segunda-feira 19h-22h, Sala A272"
+207,24,165,2025.2,"segunda-feira 20h-21h, Sala A104"
+208,16,231,2025.2,"sábado 20h-21h, Sala B211"
+209,19,275,2025.2,"quarta-feira 19h-23h, Sala C190"
+210,37,176,2025.2,"sábado 21h-22h, Sala C129"
+211,25,217,2025.2,"sexta-feira 19h-21h, Sala B245"
+212,5,112,2025.2,"domingo 21h-23h, Sala C252"
+213,1,320,2025.2,"sexta-feira 21h-22h, Sala C257"
+214,16,235,2025.2,"domingo 19h-21h, Sala A246"
+215,30,135,2025.2,"sexta-feira 19h-21h, Sala B299"
+216,25,162,2025.2,"sexta-feira 21h-23h, Sala C132"
+217,29,120,2025.2,"terça-feira 20h-22h, Sala C199"
+218,24,57,2025.2,"sexta-feira 19h-23h, Sala C193"
+219,11,287,2025.2,"segunda-feira 20h-21h, Sala B192"
+220,23,214,2025.2,"segunda-feira 20h-22h, Sala A169"
+221,29,113,2025.2,"sábado 20h-21h, Sala C145"
+222,1,27,2025.2,"segunda-feira 19h-21h, Sala A119"
+223,21,157,2025.2,"quinta-feira 21h-23h, Sala A223"
+224,31,212,2025.2,"domingo 20h-22h, Sala A130"
+225,17,153,2025.2,"segunda-feira 19h-23h, Sala C265"
+226,6,320,2025.2,"sexta-feira 21h-21h, Sala C297"
+227,3,103,2025.2,"terça-feira 21h-22h, Sala C103"
+228,7,99,2025.2,"domingo 20h-21h, Sala B111"
+229,11,66,2025.2,"domingo 19h-21h, Sala A120"
+230,5,301,2025.2,"domingo 19h-21h, Sala C136"
+231,29,268,2025.2,"domingo 19h-22h, Sala A204"
+232,32,240,2025.2,"terça-feira 20h-22h, Sala C134"
+233,37,293,2025.2,"quarta-feira 21h-21h, Sala A180"
+234,32,185,2025.2,"segunda-feira 20h-23h, Sala B133"
+235,30,146,2025.2,"domingo 20h-23h, Sala A264"
+236,27,174,2025.2,"sexta-feira 20h-22h, Sala C214"
+237,1,150,2025.2,"sábado 19h-22h, Sala A267"
+238,5,154,2025.2,"domingo 20h-21h, Sala A163"
+239,36,147,2025.2,"terça-feira 21h-23h, Sala A219"
+240,20,48,2025.2,"terça-feira 20h-21h, Sala B117"
+241,3,88,2025.2,"sábado 20h-21h, Sala C208"
+242,30,230,2025.2,"sexta-feira 20h-23h, Sala A157"
+243,16,260,2025.2,"domingo 19h-22h, Sala A114"
+244,36,64,2025.2,"quinta-feira 19h-23h, Sala C264"
+245,33,323,2025.2,"domingo 21h-22h, Sala A173"
+246,17,136,2025.2,"segunda-feira 21h-21h, Sala A191"
+247,3,217,2025.2,"sábado 20h-21h, Sala A156"
+248,23,208,2025.2,"quinta-feira 19h-23h, Sala B192"
+249,38,190,2025.2,"sábado 20h-22h, Sala C286"
+250,4,246,2025.2,"domingo 20h-22h, Sala C158"
+251,20,200,2025.2,"quinta-feira 19h-23h, Sala B194"
+252,30,154,2025.2,"sábado 19h-22h, Sala C115"
+253,34,26,2025.2,"quarta-feira 21h-21h, Sala B195"
+254,26,276,2025.2,"sábado 20h-22h, Sala B276"
+255,33,123,2025.2,"sábado 19h-23h, Sala B212"
+256,8,214,2025.2,"quinta-feira 21h-23h, Sala B251"
+257,39,210,2025.2,"domingo 20h-21h, Sala B157"
+258,10,201,2025.2,"terça-feira 19h-22h, Sala B284"
+259,4,99,2025.2,"quinta-feira 19h-21h, Sala C233"
+260,17,276,2025.2,"sexta-feira 19h-23h, Sala A184"
+261,21,314,2025.2,"quinta-feira 20h-22h, Sala A142"
+262,29,202,2025.2,"domingo 19h-21h, Sala C276"
+263,10,238,2025.2,"segunda-feira 19h-23h, Sala A103"
+264,33,44,2025.2,"domingo 20h-23h, Sala C111"
+265,8,152,2025.2,"sábado 21h-22h, Sala C234"
+266,31,172,2025.2,"sábado 20h-22h, Sala A262"
+267,26,103,2025.2,"domingo 19h-22h, Sala C178"
+268,24,163,2025.2,"segunda-feira 21h-21h, Sala B175"
+269,37,274,2025.2,"domingo 20h-21h, Sala C209"
+270,21,279,2025.2,"quinta-feira 20h-21h, Sala C154"
+271,2,242,2025.2,"terça-feira 19h-21h, Sala A297"
+272,6,109,2025.2,"sábado 21h-22h, Sala C294"
+273,27,77,2025.2,"quinta-feira 21h-23h, Sala A134"
+274,10,28,2025.2,"sábado 20h-21h, Sala A218"
+275,5,200,2025.2,"segunda-feira 21h-21h, Sala C202"
+276,7,79,2025.2,"terça-feira 21h-23h, Sala A196"
+277,35,129,2025.2,"quarta-feira 21h-22h, Sala C104"
+278,37,325,2025.2,"segunda-feira 19h-21h, Sala C186"
+279,20,115,2025.2,"sábado 21h-22h, Sala B195"
+280,23,204,2025.2,"domingo 20h-22h, Sala B223"
+281,26,81,2025.2,"sábado 19h-22h, Sala A242"
+282,28,210,2025.2,"sexta-feira 19h-21h, Sala C285"
+283,10,88,2025.2,"quinta-feira 21h-23h, Sala C243"
+284,25,29,2025.2,"domingo 21h-21h, Sala A264"
+285,13,126,2025.2,"sábado 20h-21h, Sala C193"
+286,40,261,2025.2,"quinta-feira 21h-22h, Sala A188"
+287,18,49,2025.2,"terça-feira 20h-23h, Sala C240"
+288,7,137,2025.2,"quarta-feira 21h-21h, Sala B175"
+289,8,38,2025.2,"sexta-feira 21h-22h, Sala A197"
+290,7,96,2025.2,"quinta-feira 21h-21h, Sala A134"
+291,24,129,2025.2,"sábado 20h-22h, Sala A126"
+292,10,113,2025.2,"quarta-feira 20h-21h, Sala B263"
+293,36,315,2025.2,"sábado 21h-23h, Sala A291"
+294,22,202,2025.2,"terça-feira 19h-21h, Sala B213"
+295,40,227,2025.2,"terça-feira 21h-22h, Sala A229"
+296,16,95,2025.2,"domingo 19h-21h, Sala A192"
+297,11,78,2025.2,"domingo 20h-23h, Sala B283"
+298,1,41,2025.2,"quarta-feira 19h-22h, Sala A181"
+299,28,139,2025.2,"domingo 19h-21h, Sala B234"
+300,34,181,2025.2,"sexta-feira 21h-22h, Sala B207"
