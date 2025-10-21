@@ -1,7 +1,6 @@
 # pages/painel_cordenação.py
 import streamlit as st
 import pandas as pd
-<<<<<<< HEAD
 import plotly.express as px
 import plotly.graph_objects as go 
 
@@ -55,12 +54,10 @@ st.markdown("""
 
 # --- CARREGAMENTO E PROCESSAMENTO DOS DADOS ---
 try:
-    # --- CAMINHOS ABSOLUTOS CONFORME SOLICITADO ---
-    # NOTA: O nome 'usuario.csv' (singular) foi mantido 
-    # com base nos dados que você enviou anteriormente (usuario / user_id...).
+    # --- Caminhos absolutos e nomes de arquivo corretos ---
     df_usuarios = pd.read_csv('C:\\Users\\luiso\\OneDrive\\Desktop\\PIM\\data\\usuarios.csv')
     df_turmas = pd.read_csv('C:\\Users\\luiso\\OneDrive\\Desktop\\PIM\\data\\turmas.csv')
-    df_disciplinas = pd.read_csv('C:\\Users\\luiso\\OneDrive\\Desktop\\PIM\\data\\diciplinas.csv')
+    df_disciplinas = pd.read_csv('C:\\Users\\luiso\\OneDrive\\Desktop\\PIM\\data\\diciplinas.csv') 
     df_matriculas = pd.read_csv('C:\\Users\\luiso\\OneDrive\\Desktop\\PIM\\data\\matriculas.csv')
     df_notas = pd.read_csv('C:\\Users\\luiso\\OneDrive\\Desktop\\PIM\\data\\notas.csv')
     df_frequencia = pd.read_csv('C:\\Users\\luiso\\OneDrive\\Desktop\\PIM\\data\\frequencia.csv')
@@ -96,7 +93,7 @@ try:
     col_graf1, col_graf2 = st.columns(2)
     
     with col_graf1:
-        total_presentes = (df_frequencia['status'] == 'Presente').sum()
+        total_presentes = (df_frequencia['status_presenca'] == 'Presente').sum()
         total_aulas_registradas = len(df_frequencia)
         taxa_presenca = (total_presentes / total_aulas_registradas) * 100 if total_aulas_registradas > 0 else 0
 
@@ -111,7 +108,7 @@ try:
 
     with col_graf2:
         NOTA_DE_CORTE_APROVACAO = 6.0
-        aprovados = (df_notas['nota'] >= NOTA_DE_CORTE_APROVACAO).sum()
+        aprovados = (df_notas['valor_nota'] >= NOTA_DE_CORTE_APROVACAO).sum()
         total_notas = len(df_notas)
         taxa_aprovacao = (aprovados / total_notas) * 100 if total_notas > 0 else 0
         
@@ -127,60 +124,51 @@ try:
 
     st.markdown("---")
     
-    # --- SEÇÃO 3: ANÁLISE DE FREQUÊNCIA POR TURMA ---
-    # CORREÇÃO LÓGICA: Alterado de "Matéria" para "Turma", pois o CSV 'turmas'
-    # não possui mais a chave 'id_disciplina' para fazer a junção.
-    st.header("Análise de Frequência por Turma")
-    frequencia_com_turma = pd.merge(df_frequencia, df_matriculas, on='matricula_id')
-    frequencia_com_turma = pd.merge(frequencia_com_turma, df_turmas, on='turma_id')
+    # --- SEÇÃO 3: ANÁLISE DE FREQUÊNCIA POR MATÉRIA ---
+    st.header("Análise de Frequência por Matéria")
+    frequencia_com_disciplina = pd.merge(df_frequencia, df_matriculas, on='id_matricula')
+    frequencia_com_disciplina = pd.merge(frequencia_com_disciplina, df_turmas, on='id_turma')
+    frequencia_com_disciplina = pd.merge(frequencia_com_disciplina, df_disciplinas, on='id_disciplina') 
     
-    # Usamos 'nome_turma' que já é descritivo
-    lista_turmas_freq = sorted(frequencia_com_turma['nome_turma'].unique())
-    turma_selecionada_freq = st.selectbox("Selecione a Turma para análise de frequência:", options=lista_turmas_freq)
+    lista_disciplinas_freq = sorted(frequencia_com_disciplina['nome_disciplina'].unique())
+    disciplina_selecionada_freq = st.selectbox("Selecione a Matéria para análise de frequência:", options=lista_disciplinas_freq)
 
-    if turma_selecionada_freq:
-        dados_filtrados_turma_freq = frequencia_com_turma[frequencia_com_turma['nome_turma'] == turma_selecionada_freq]
-        frequencia_turma_counts = dados_filtrados_turma_freq['status'].value_counts().reset_index()
-        frequencia_turma_counts.columns = ['status', 'contagem']
-        fig_donut_turma = px.pie(frequencia_turma_counts, names='status', values='contagem', 
-                                   title=f'Taxa de Presença em {turma_selecionada_freq}', 
-                                   color='status', color_discrete_map={'Presente': '#4285F4', 'Ausente': '#EA4335'}, hole=0.4)
-        st.plotly_chart(fig_donut_turma, use_container_width=True)
+    if disciplina_selecionada_freq:
+        dados_filtrados_disciplina_freq = frequencia_com_disciplina[frequencia_com_disciplina['nome_disciplina'] == disciplina_selecionada_freq]
+        frequencia_disciplina_counts = dados_filtrados_disciplina_freq['status_presenca'].value_counts().reset_index()
+        frequencia_disciplina_counts.columns = ['status', 'contagem']
+        fig_donut_disciplina = px.pie(frequencia_disciplina_counts, names='status', values='contagem', title=f'Taxa de Presença em {disciplina_selecionada_freq}', color='status', color_discrete_map={'Presente': '#4285F4', 'Ausente': '#EA4335'}, hole=0.4)
+        st.plotly_chart(fig_donut_disciplina, use_container_width=True)
 
     st.markdown("---")
     
     # --- SEÇÃO 4: ANÁLISE DE NOTAS (P1 & P2) POR TURMA ---
     st.header("Análise de Notas (P1 e P2) por Turma")
-    
-    # CORREÇÃO LÓGICA: O 'nome_turma' do seu CSV já é o nome de exibição.
-    # Removemos o merge com 'disciplinas' e a concatenação com 'semestre'
-    # pois essas colunas não existem mais no 'turmas.csv'.
-    turmas_com_disciplinas = df_turmas.copy()
-    turmas_com_disciplinas['turma_display'] = turmas_com_disciplinas['nome_turma']
+    turmas_com_disciplinas = pd.merge(df_turmas, df_disciplinas, on='id_disciplina')
+    turmas_com_disciplinas['turma_display'] = turmas_com_disciplinas['nome_disciplina'] + " - Semestre: " + turmas_com_disciplinas['semestre'].astype(str)
     lista_turmas_notas = sorted(turmas_com_disciplinas['turma_display'].unique())
 
     st.selectbox("Selecione uma turma para ver as médias e analisar os alunos:", options=["Selecione uma turma..."] + lista_turmas_notas, key="turma_selecionada")
 
     if st.session_state.turma_selecionada != "Selecione uma turma...":
-        turma_id_selecionada = turmas_com_disciplinas[turmas_com_disciplinas['turma_display'] == st.session_state.turma_selecionada]['turma_id'].iloc[0]
-        matriculas_da_turma = df_matriculas[df_matriculas['turma_id'] == turma_id_selecionada]
+        turma_id_selecionada = turmas_com_disciplinas[turmas_com_disciplinas['turma_display'] == st.session_state.turma_selecionada]['id_turma'].iloc[0]
+        matriculas_da_turma = df_matriculas[df_matriculas['id_turma'] == turma_id_selecionada]
         
         if not matriculas_da_turma.empty:
-            notas_da_turma = df_notas[df_notas['matricula_id'].isin(matriculas_da_turma['matricula_id'])]
+            # CORREÇÃO AQUI: 'matricula_id' -> 'id_matricula'
+            notas_da_turma = df_notas[df_notas['id_matricula'].isin(matriculas_da_turma['id_matricula'])]
             
-            # CORREÇÃO: 'tipo_avaliacao' -> 'avaliacao'
-            # Ajustado para os nomes das avaliações que você enviou ('Prova 1', 'Trabalho Final')
-            media_p1 = notas_da_turma[notas_da_turma['avaliacao'].str.strip().str.lower() == 'prova 1']['nota'].mean()
-            media_p2 = notas_da_turma[notas_da_turma['avaliacao'].str.strip().str.lower() == 'trabalho final']['nota'].mean()
+            media_p1 = notas_da_turma[notas_da_turma['tipo_avaliacao'].str.strip().str.lower() == 'p1']['valor_nota'].mean()
+            media_p2 = notas_da_turma[notas_da_turma['tipo_avaliacao'].str.strip().str.lower() == 'p2']['valor_nota'].mean()
             
             media_p1 = media_p1 if pd.notna(media_p1) else 0.0
             media_p2 = media_p2 if pd.notna(media_p2) else 0.0
             
             col_p1, col_p2 = st.columns(2)
             with col_p1:
-                st.markdown(f'<div class="metric-card"><div class="label">Média Prova 1 da Turma</div><div class="value">{media_p1:.2f}</div></div>', unsafe_allow_html=True)
+                st.markdown(f'<div class="metric-card"><div class="label">Média P1 da Turma</div><div class="value">{media_p1:.2f}</div></div>', unsafe_allow_html=True)
             with col_p2:
-                st.markdown(f'<div class="metric-card"><div class="label">Média Trab. Final da Turma</div><div class="value">{media_p2:.2f}</div></div>', unsafe_allow_html=True)
+                st.markdown(f'<div class="metric-card"><div class="label">Média P2 da Turma</div><div class="value">{media_p2:.2f}</div></div>', unsafe_allow_html=True)
         else:
             st.warning("Não há alunos matriculados nesta turma para calcular as médias.")
 
@@ -188,50 +176,48 @@ try:
 
     # --- SEÇÃO 5: ESTUDO DE PERFIL DE ALUNO ---
     st.header("Estudo de Perfil de Aluno")
-    NOME_CORRETO_DA_COLUNA = 'nome_completo' # Esta coluna existe no 'usuario.csv'
+    NOME_CORRETO_DA_COLUNA = 'nome_completo'
 
     if st.session_state.turma_selecionada != "Selecione uma turma...":
         st.info(f"Analisando alunos da turma: *{st.session_state.turma_selecionada}*")
-        turma_id_perfil = turmas_com_disciplinas[turmas_com_disciplinas['turma_display'] == st.session_state.turma_selecionada]['turma_id'].iloc[0]
-        alunos_na_turma = df_matriculas[df_matriculas['turma_id'] == turma_id_perfil]
-        
-        # CORREÇÃO: 'id_aluno' -> 'aluno_id' (em matriculas)
-        # CORREÇÃO: 'id_usuario' -> 'user_id' (em usuarios)
-        alunos_info = pd.merge(alunos_na_turma, df_usuarios, left_on='aluno_id', right_on='user_id')
+        turma_id_perfil = turmas_com_disciplinas[turmas_com_disciplinas['turma_display'] == st.session_state.turma_selecionada]['id_turma'].iloc[0]
+        alunos_na_turma = df_matriculas[df_matriculas['id_turma'] == turma_id_perfil]
+        alunos_info = pd.merge(alunos_na_turma, df_usuarios, left_on='id_aluno', right_on='id_usuario')
         
         if NOME_CORRETO_DA_COLUNA not in alunos_info.columns:
-            st.error(f"Erro: A coluna '{NOME_CORRETO_DA_COLUNA}' não foi encontrada em 'usuario.csv'. Verifique o nome da coluna.")
+            st.error(f"Erro: A coluna '{NOME_CORRETO_DA_COLUNA}' não foi encontrada em 'usuarios.csv'. Verifique o nome da coluna.")
         else:
             lista_alunos_perfil = sorted(alunos_info[NOME_CORRETO_DA_COLUNA].unique())
             aluno_selecionado_perfil = st.selectbox("Selecione o(a) aluno(a) para gerar o relatório:", options=["Selecione..."] + lista_alunos_perfil, key="aluno_perfil")
 
             if aluno_selecionado_perfil != "Selecione...":
-                # CORREÇÃO: 'id_aluno' -> 'aluno_id'
-                id_aluno_selecionado = alunos_info[alunos_info[NOME_CORRETO_DA_COLUNA] == aluno_selecionado_perfil]['aluno_id'].iloc[0]
+                id_aluno_selecionado = alunos_info[alunos_info[NOME_CORRETO_DA_COLUNA] == aluno_selecionado_perfil]['id_aluno'].iloc[0]
                 
                 with st.container(border=True):
                     st.subheader(f"Relatório de Desempenho: {aluno_selecionado_perfil}")
                     
-                    # CORREÇÃO: 'id_aluno' -> 'aluno_id'
-                    matriculas_do_aluno = df_matriculas[df_matriculas['aluno_id'] == id_aluno_selecionado]
-                    notas_do_aluno_geral = df_notas[df_notas['matricula_id'].isin(matriculas_do_aluno['matricula_id'])]
-                    media_geral_aluno = notas_do_aluno_geral['nota'].mean()
+                    matriculas_do_aluno = df_matriculas[df_matriculas['id_aluno'] == id_aluno_selecionado]
+                    # CORREÇÃO AQUI: 'matricula_id' -> 'id_matricula'
+                    notas_do_aluno_geral = df_notas[df_notas['id_matricula'].isin(matriculas_do_aluno['id_matricula'])]
+                    media_geral_aluno = notas_do_aluno_geral['valor_nota'].mean()
                     media_geral_aluno = media_geral_aluno if pd.notna(media_geral_aluno) else 0.0
                     
-                    # CORREÇÃO: 'id_aluno' -> 'aluno_id'
-                    matricula_id_na_turma = alunos_info[(alunos_info['aluno_id'] == id_aluno_selecionado) & (alunos_info['turma_id'] == turma_id_perfil)]['matricula_id'].iloc[0]
-                    notas_aluno_na_turma = df_notas[df_notas['matricula_id'] == matricula_id_na_turma]
-                    media_aluno_na_turma = notas_aluno_na_turma['nota'].mean()
+                    matricula_id_na_turma = alunos_info[(alunos_info['id_aluno'] == id_aluno_selecionado) & (alunos_info['id_turma'] == turma_id_perfil)]['id_matricula'].iloc[0]
+                    # CORREÇÃO AQUI: 'matricula_id' -> 'id_matricula'
+                    notas_aluno_na_turma = df_notas[df_notas['id_matricula'] == matricula_id_na_turma]
+                    media_aluno_na_turma = notas_aluno_na_turma['valor_nota'].mean()
                     media_aluno_na_turma = media_aluno_na_turma if pd.notna(media_aluno_na_turma) else 0.0
                     
-                    matriculas_da_turma_perfil = df_matriculas[df_matriculas['turma_id'] == turma_id_perfil]
-                    notas_da_turma_geral = df_notas[df_notas['matricula_id'].isin(matriculas_da_turma_perfil['matricula_id'])]
-                    media_geral_turma = notas_da_turma_geral['nota'].mean()
+                    matriculas_da_turma_perfil = df_matriculas[df_matriculas['id_turma'] == turma_id_perfil]
+                    # CORREÇÃO AQUI: 'matricula_id' -> 'id_matricula'
+                    notas_da_turma_geral = df_notas[df_notas['id_matricula'].isin(matriculas_da_turma_perfil['id_matricula'])]
+                    media_geral_turma = notas_da_turma_geral['valor_nota'].mean()
                     media_geral_turma = media_geral_turma if pd.notna(media_geral_turma) else 0.0
                     
-                    frequencia_aluno = df_frequencia[df_frequencia['matricula_id'] == matricula_id_na_turma]
+                    # CORREÇÃO AQUI: 'matricula_id' -> 'id_matricula'
+                    frequencia_aluno = df_frequencia[df_frequencia['id_matricula'] == matricula_id_na_turma]
                     if not frequencia_aluno.empty:
-                        faltas = (frequencia_aluno['status'] == 'Ausente').sum()
+                        faltas = (frequencia_aluno['status_presenca'] == 'Ausente').sum()
                         total_aulas = len(frequencia_aluno)
                         percentual_faltas = (faltas / total_aulas) * 100 if total_aulas > 0 else 0
                     else:
@@ -254,13 +240,12 @@ try:
                     col_t1, col_t2 = st.columns(2)
                     with col_t1:
                         st.write("*Notas Detalhadas na Matéria*")
-                        # CORREÇÃO: 'tipo_avaliacao' -> 'avaliacao'
-                        notas_display = notas_aluno_na_turma[['avaliacao', 'nota']].rename(columns={'avaliacao': 'Avaliação', 'nota': 'Nota'})
+                        notas_display = notas_aluno_na_turma[['tipo_avaliacao', 'valor_nota']].rename(columns={'tipo_avaliacao': 'Avaliação', 'valor_nota': 'Nota'})
                         st.dataframe(notas_display, use_container_width=True, hide_index=True)
                     with col_t2:
                         st.write("*Frequência Detalhada na Matéria*")
                         if not frequencia_aluno.empty:
-                            detalhes_frequencia = frequencia_aluno['status'].value_counts().reset_index()
+                            detalhes_frequencia = frequencia_aluno['status_presenca'].value_counts().reset_index()
                             detalhes_frequencia.columns = ['Status', 'Total de Aulas']
                             st.dataframe(detalhes_frequencia, use_container_width=True, hide_index=True)
                         else:
@@ -274,24 +259,17 @@ try:
     st.header("Alunos que Precisam de Atenção")
     st.write("Use os filtros para identificar proativamente alunos com baixo desempenho e alta taxa de ausência.")
 
-    # CORREÇÃO: 'id_aluno' -> 'aluno_id'
-    media_geral_por_aluno = pd.merge(df_notas, df_matriculas, on='matricula_id').groupby('aluno_id')['nota'].mean().reset_index()
-    media_geral_por_aluno.rename(columns={'nota': 'media_geral'}, inplace=True)
+    media_geral_por_aluno = pd.merge(df_notas, df_matriculas, on='id_matricula').groupby('id_aluno')['valor_nota'].mean().reset_index()
+    media_geral_por_aluno.rename(columns={'valor_nota': 'media_geral'}, inplace=True)
     
-    freq_com_alunos = pd.merge(df_frequencia, df_matriculas, on='matricula_id')
-    # CORREÇÃO: 'id_aluno' -> 'aluno_id'
-    ausencias = freq_com_alunos[freq_com_alunos['status'] == 'Ausente'].groupby('aluno_id').size()
-    # CORREÇÃO: 'id_aluno' -> 'aluno_id'
-    total_aulas = freq_com_alunos.groupby('aluno_id').size()
+    freq_com_alunos = pd.merge(df_frequencia, df_matriculas, on='id_matricula')
+    ausencias = freq_com_alunos[freq_com_alunos['status_presenca'] == 'Ausente'].groupby('id_aluno').size()
+    total_aulas = freq_com_alunos.groupby('id_aluno').size()
     
     taxa_ausencia = ((ausencias / total_aulas) * 100).fillna(0).reset_index(name='taxa_ausencia_%')
     
-    # CORREÇÃO: 'id_aluno' -> 'aluno_id'
-    df_risco = pd.merge(media_geral_por_aluno, taxa_ausencia, on='aluno_id', how='outer').fillna(0)
-    
-    # CORREÇÃO: 'id_aluno' -> 'aluno_id' (em df_risco)
-    # CORREÇÃO: 'id_usuario' -> 'user_id' (em df_usuarios)
-    df_risco = pd.merge(df_risco, df_usuarios, left_on='aluno_id', right_on='user_id')
+    df_risco = pd.merge(media_geral_por_aluno, taxa_ausencia, on='id_aluno', how='outer').fillna(0)
+    df_risco = pd.merge(df_risco, df_usuarios, left_on='id_aluno', right_on='id_usuario')
 
     col_filtro1, col_filtro2 = st.columns(2)
     with col_filtro1:
@@ -308,47 +286,8 @@ try:
 
 # --- TRATAMENTO DE ERROS ---
 except FileNotFoundError as e:
-    st.error(f"Arquivo de dados não encontrado: {e}. Verifique se o caminho e o nome do arquivo estão corretos.")
+    st.error(f"Arquivo de dados não encontrado: {e}. Verifique se o caminho e o nome do arquivo estão corretos (ex: 'usuarios.csv', 'disciplinas.csv').")
 except KeyError as e:
-    st.error(f"Erro de Coluna: Uma coluna esperada não foi encontrada: {e}. Verifique se os seus CSVs (ex: 'usuario.csv', 'notas.csv') têm todas as colunas necessárias ('user_id', 'aluno_id', 'avaliacao', etc.).")
+    st.error(f"Erro de Coluna: Uma coluna esperada não foi encontrada: {e}. Verifique se os seus CSVs têm todas as colunas necessárias (ex: 'id_usuario', 'id_aluno', 'id_matricula', 'valor_nota', 'status_presenca', etc.).")
 except Exception as e:
     st.error(f"Ocorreu um erro ao processar os dados: {e}")
-=======
-from auth_utils import show_custom_menu
-
-show_custom_menu()
-
-st.title("📊 Painel de Coordenação")
-st.write("Visão geral dos dados acadêmicos.")
-
-try:
-    df_usuarios = pd.read_csv('data/usuarios.csv')
-    df_turmas = pd.read_csv('data/turmas.csv')
-    df_disciplinas = pd.read_csv('data/disciplinas.csv')
-    df_matriculas = pd.read_csv('data/matriculas.csv')
-    df_notas = pd.read_csv('data/notas.csv')
-    
-    st.header("Métricas Gerais")
-    total_alunos = df_usuarios[df_usuarios['role'] == 'Aluno'].shape[0]
-    total_professores = df_usuarios[df_usuarios['role'] == 'Professor'].shape[0]
-    total_turmas = df_turmas.shape[0]
-    
-    col1, col2, col3 = st.columns(3)
-    col1.metric("Total de Alunos", total_alunos)
-    col2.metric("Total de Professores", total_professores)
-    col3.metric("Total de Turmas", total_turmas)
-    
-    st.header("Desempenho Médio por Turma")
-    
-    notas_com_turmas = pd.merge(df_notas, df_matriculas, on='id_matricula')
-    media_por_turma = notas_com_turmas.groupby('id_turma')['valor_nota'].mean().reset_index()
-    media_por_turma = pd.merge(media_por_turma, df_turmas, on='id_turma')
-    media_por_turma = pd.merge(media_por_turma, df_disciplinas, on='id_disciplina')
-    media_por_turma.rename(columns={'valor_nota': 'Média da Turma'}, inplace=True)
-    
-    st.dataframe(media_por_turma[['nome_disciplina', 'semestre', 'Média da Turma']], use_container_width=True)
-    st.bar_chart(media_por_turma.set_index('nome_disciplina')['Média da Turma'])
-
-except FileNotFoundError:
-    st.error("Arquivos de dados não encontrados. Execute o script de geração de dados.")
->>>>>>> 2c890c1dde41bf62524c09774854234b3a8644dd
