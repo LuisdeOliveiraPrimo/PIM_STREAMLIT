@@ -1,0 +1,5 @@
+id_recado,titulo,mensagem,autor_nome,autor_id,data_publicacao,publico_alvo_turma_id
+1,Boas-vindas ao Semestre!,Olá a todos! A coordenação deseja um excelente semestre de muito aprendizado e sucesso. Fiquem atentos a este mural!,Bianca Moura,1,2025-10-01,Geral
+2,Lembrete: Atividade,"Pessoal, não se esqueçam da atividade listada no portal. O prazo está se aproximando!",Maria Julia da Costa,26,2025-10-05,1
+3,Aviso de Prova P1,Atenção: A nossa prova P1 será na semana que vem. O conteúdo cobre os capítulos 1 a 3.,Maria Julia da Costa,26,2025-10-10,2
+4,Horário da Biblioteca,Informamos que a biblioteca terá seu horário estendido durante a semana de provas.,Bianca Moura,1,2025-10-12,Geral

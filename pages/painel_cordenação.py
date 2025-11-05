@@ -1,15 +1,39 @@
-# pages/painel_cordenação.py
+# pages/painel_cordenação.py (CORRIGIDO)
+
 import streamlit as st
 import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go 
 import sys
 import os
-# --- CONFIGURAÇÃO DA PÁGINA ---
+
+# 1. Bloco de importação de path (sys.path)
+pages_dir = os.path.dirname(os.path.abspath(__file__))
+project_root = os.path.dirname(pages_dir)
+if project_root not in sys.path:
+    sys.path.append(project_root)
+
+# 2. Imports das suas bibliotecas
+from auth_utils import show_custom_menu
+
+# 3. COMANDO Nº 1: st.set_page_config()
 st.set_page_config(layout="wide")
 
+# 4. COMANDO Nº 2: show_custom_menu()
+show_custom_menu()
+
+# 5. O resto do seu código
 st.title("📊 Painel de Coordenação")
 st.write("Uma ferramenta para análise e apoio à decisão acadêmica.")
+
+st.markdown("""
+<style>
+.metric-card {
+...
+</style>
+""", unsafe_allow_html=True)
+
+# (O resto do seu código continua aqui...)
 
 
 # --- ESTILO CSS PARA OS CARTÕES (COM AJUSTE DE ALTURA) ---
@@ -84,7 +108,7 @@ try:
     with col3:
         st.markdown(f'<div class="metric-card"><div class="label">Total de Turmas</div><div class="value">{total_turmas}</div></div>', unsafe_allow_html=True)
 
-    st.markdown("<br>", unsafe_allow_html=True)
+    st.markdown("<br>", unsafe_allow_html=True) 
     st.markdown("---")
 
     # --- SEÇÃO 2: VISÃO GERAL DA INSTITUIÇÃO ---

@@ -1,14 +1,40 @@
+# pages/painel_professor.py (CORRIGIDO)
+
 import streamlit as st
 import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
-from auth_utils import show_custom_menu
 import os
 from datetime import datetime
 import sys
 
-# --- AUTENTICAÇÃO E MENU ---
+# 1. Bloco de importação de path (sys.path)
+pages_dir = os.path.dirname(os.path.abspath(__file__))
+project_root = os.path.dirname(pages_dir)
+if project_root not in sys.path:
+    sys.path.append(project_root)
+
+# 2. Imports das suas bibliotecas
+from auth_utils import show_custom_menu
+
+# 3. COMANDO Nº 1: st.set_page_config()
+st.set_page_config(layout="wide")
+
+# 4. COMANDO Nº 2: show_custom_menu()
 show_custom_menu()
+
+# 5. O resto do seu código
+st.markdown("""
+<style>
+.metric-card {
+...
+</style>
+""", unsafe_allow_html=True)
+
+st.title("🧑‍🏫 Painel do Professor")
+st.write(f"Olá, Prof(a). *{st.session_state.user_info['nome_completo']}*!")
+
+# (O resto do seu código continua aqui...)
 
 # --- CONFIGURAÇÃO DA PÁGINA ---
 st.set_page_config(layout="wide")

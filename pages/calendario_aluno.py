@@ -1,25 +1,39 @@
-# Bloco de código para o topo de CADA ARQUIVO EM 'pages/'
+from datetime import date
+import streamlit as st
+import pandas as pd
+import plotly.express as px
+from streamlit_calendar import calendar
 import sys
 import os
-import streamlit as st
 
+# 1. Bloco de importação de path (sys.path)
 pages_dir = os.path.dirname(os.path.abspath(__file__))
 project_root = os.path.dirname(pages_dir)
 if project_root not in sys.path:
     sys.path.append(project_root)
-# Fim do bloco
 
-import pandas as pd
-from datetime import date
+# 2. Imports das suas bibliotecas
 from auth_utils import show_custom_menu
-from config import get_csv_path
 
-# --- Configuração da Página ---
-# CORREÇÃO: st.set_page_config() deve ser o primeiro comando Streamlit
+# 3. COMANDO Nº 1: st.set_page_config()
 st.set_page_config(layout="wide")
 
-# --- Autenticação e Menu ---
+# 4. COMANDO Nº 2: show_custom_menu()
 show_custom_menu()
+
+# 5. O resto do seu código
+st.markdown("""
+<style>
+.metric-card {
+...
+</style>
+""", unsafe_allow_html=True)
+
+st.title("🎓 Meu Painel")
+st.write(f"Bem-vindo(a), *{st.session_state.user_info['nome_completo']}*!")
+
+# (O resto do seu código continua aqui...)
+
 
 # Define o nome do arquivo CSV
 
