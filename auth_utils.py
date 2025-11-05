@@ -48,6 +48,9 @@ def show_custom_menu():
             st.switch_page("pages/calendario_aluno.py")
         if st.sidebar.button("📌 Mural de Recados"):
             st.switch_page("pages/mural_recados_aluno.py")
+        if st.sidebar.button("🪪 Carterinha Aluno"):
+            st.switch_page("pages/carteirinha_aluno.py")
+
 
     if role == 'Professor':
         if st.sidebar.button("🧑‍🏫 Meu Painel"):
