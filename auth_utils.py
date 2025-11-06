@@ -50,8 +50,6 @@ def show_custom_menu():
             st.switch_page("pages/mural_recados_aluno.py")
         if st.sidebar.button("🪪 Carterinha Aluno"):
             st.switch_page("pages/carteirinha_aluno.py")
-
-
     if role == 'Professor':
         if st.sidebar.button("🧑‍🏫 Meu Painel"):
             st.switch_page("pages/painel_professor.py")
@@ -59,11 +57,9 @@ def show_custom_menu():
             st.switch_page("pages/gestao_prazos_professor.py")
         if st.sidebar.button("📌 Enviar Recado"):
             st.switch_page("pages/gestao_recados.py")
-
     if role == 'Coordenação':
         if st.sidebar.button("📊 Painel de Coordenação"):
             st.switch_page("pages/painel_cordenação.py")
-
     if role == 'Administração':
         if st.sidebar.button("👑 Painel de Administração"):
             st.switch_page("pages/painel_administração.py")
